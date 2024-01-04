@@ -1,0 +1,24 @@
+<div class="home" *ngIf="popularMovies.length > 1">
+  <movies-nav-bar/>
+  <movies-slide-show [nowMovies]="nowMovies"/>
+</div>
+<main class="principal" *ngIf="popularMovies.length > 1">
+  <section class="trending">
+    <h2><span>E</span>n <span>T</span>endencia</h2>
+    <home-slide-movies [getMovies]="trending"/>
+  </section>
+  <section class="popular">
+    <h2><span>P</span>opulares</h2>
+    <home-slide-movies [getMovies]="popularMovies"/>
+  </section>
+  <section class="top-rated">
+    <h2><span>M</span>ás <span>V</span>alorados</h2>
+    <home-slide-movies [getMovies]="topMovies"/>
+  </section>
+  <div *ngIf="routeActive != '/home'">
+    <div class="info-movies">
+      <router-outlet></router-outlet>
+      <!-- <info-movies [movieDetails]="moviesDetails" [cast]="cast" (openOrClose)="closeOpenInfo($event)"/> -->
+    </div>
+  </div>
+</main>

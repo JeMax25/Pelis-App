@@ -1,0 +1,23 @@
+.principal {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+section > h2 {
+  color: white;
+  font-size: 2rem;
+  margin-left: 2.5%;
+  padding-top: 15px;
+}
+
+h2 > span {
+  color: var(--color-primario);
+}
+
+.info-movies {
+  transition: all 0.2s ease-in-out;
+  z-index: 9999;
+}
+
+

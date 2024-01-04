@@ -1,0 +1,12 @@
+<div class="movies">
+  <movies-nav-bar/>
+  <div class="swiper-container" *ngIf="genreMovies.length > 1">
+    <genrer-slide [media]="'movie'" [genreList]="genreMovies" (dataMoviesOrSeries)="takeMovies($event)"/>
+  </div>
+  <div class="list-container">
+    <div class="list-card animate__animated animate__fadeIn" *ngFor="let movie of moviesList">
+      <img [src]="['https://image.tmdb.org/t/p/w500' + movie.poster_path]" alt="" [routerLink]="['/movies/info/' + movie.id]">
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

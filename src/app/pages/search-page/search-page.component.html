@@ -1,0 +1,15 @@
+<div class="body">
+  <movies-nav-bar></movies-nav-bar>
+  <div class="title">
+    <h2 *ngIf="movies.length >= 1"><span>P</span>eliculas</h2>
+    <h2 *ngIf="tvSeries.length >= 1"><span>S</span>eries</h2>
+  </div>
+  <div *ngIf="movies.length > 0 || tvSeries.length > 0; else noResult" class="swipers" >
+    <slide-grid class="slide-grid-1" [text]="txt" [moviesAndTv]="movies" />
+    <slide-grid [text]="txt"  [moviesAndTv]="tvSeries"  />
+  </div>
+  <router-outlet></router-outlet>
+  <ng-template #noResult>
+    <h3 class="no-result">Sin Resultados para: <mark>{{txt}}</mark> </h3>
+  </ng-template>
+</div>

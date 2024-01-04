@@ -1,0 +1,26 @@
+<div *ngIf="moviesAndTv.length > 0" class="swiper-container">
+  <div class="swiper">
+    <!-- <h2 *ngIf="movieConfirm; else tvSeries"> <span>P</span>eliculas</h2>
+    <ng-template #tvSeries>
+      <h2><span>S</span>eries</h2>
+    </ng-template> -->
+
+    <swiper-container class="mySwiper-1"
+    pagination="true"
+    navigation="true"
+    pagination-clickable="true"
+    [slidesPerView]="slidesPerView"
+    grid-rows="2"
+    space-between="10"
+    horizontal="true"
+    observer="true"
+    observe-parents="true">
+
+      <swiper-slide class="slide-1"  *ngFor="let movieOrTv of moviesAndTv"
+      [routerLink]="['/search/' + text + '/'+ movieOrTv.id + '/' + movieOrTv.media_type]">
+        <img [src]="['https://image.tmdb.org/t/p/w500' + movieOrTv.poster_path]" alt="">
+      </swiper-slide>
+
+    </swiper-container>
+  </div>
+</div>

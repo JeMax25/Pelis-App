@@ -1,0 +1,51 @@
+.swiper-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+}
+
+swiper-container {
+  width: 94%;
+  height: 80vh;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+h2 > span {
+  color: var(--color-primario);
+  font-size: 2.1rem;
+}
+
+h2{
+  text-align: center;
+  color: white;
+  margin: 2% 0 2% 0;
+  font-size: 2rem;
+}
+
+swiper-container::part(button-prev) {
+  color: var(--color-primario);
+
+
+}
+
+swiper-container::part(button-next) {
+  color: var(--color-primario);
+
+}
+
+swiper-container::part(bullet-active) {
+  background-color: var(--color-primario);
+}

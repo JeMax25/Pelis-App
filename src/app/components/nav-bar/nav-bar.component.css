@@ -1,0 +1,151 @@
+.nav-bar {
+  background-color: var(--color-segundario);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100vw;
+  padding: 0 5.2% 0 5.2%;
+}
+
+.nav-components {
+  display: flex;
+
+}
+
+.nav-title {
+  width: 130px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-title > span {
+  color: var(--color-primario);
+}
+
+.nav-ul {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  list-style: none;
+  color: white;
+}
+
+.nav-ul > li {
+  cursor: pointer;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.active-link {
+  border-bottom: 2px solid var(--color-primario);
+}
+
+.form {
+  width: 290px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 60px;
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding-left: 40px;
+  color: white;
+}
+
+.icon-search {
+  height: 100%;
+  bottom: 0;
+  position: absolute;
+  color: white;
+  border-right: 1px solid white;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 768px ) {
+
+  .nav-components {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-ul {
+    position: absolute;
+    top: -60%;
+    left: 0%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--color-segundario);
+    border-bottom: 4px solid var(--color-primario);
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .active-menu {
+    top: 0%;
+  }
+
+  .nav-ul > li {
+    cursor: pointer;
+    font-size: 2rem;
+    position: relative;
+  }
+
+  .icon-menu {
+    display: block;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .icon-close {
+    position: absolute;
+    top: 5.2%;
+    right: 5.2%;
+  }
+
+  .form {
+    position: absolute;
+    width: 40px;
+    top: 20px;
+    right:  0;
+    left: 70%;
+    --border-color: none;
+  }
+
+  .icon-search {
+    border-right:var(--border-color);
+  }
+
+  .form:hover {
+    left: 2%;
+    width: 80%;
+    background: var(--color-segundario);
+    --border-color: 1px solid white;
+  }
+
+
+  .form-input:hover {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding-left: 40px;
+    color: white;
+  }
+}

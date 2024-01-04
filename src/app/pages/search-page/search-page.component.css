@@ -1,0 +1,51 @@
+
+.body {
+  width: 100vw;
+}
+
+.swipers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+slide-grid {
+  width: 50%;
+}
+
+.slide-grid-1 {
+  padding-left: 4%;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h2 {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin: 15px 0 15px 0;
+}
+
+h2 > span {
+  transform: scale(1.1);
+  color: var(--color-primario);
+}
+
+.no-result {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-top: 20vh;
+}
+
+.no-result > mark {
+  background-color: var(--color-primario);
+  color: var(--color-segundario);
+}
+
+

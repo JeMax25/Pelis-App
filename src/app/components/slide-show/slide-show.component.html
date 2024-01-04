@@ -1,0 +1,15 @@
+<swiper-container *ngIf="nowMovies.length > 1"
+  navigation="true"
+  pagination="true"
+  pagination-dynamic-bullets="true"
+  autoplay-delay="4000"
+  speed="900"
+  loop="true">
+  <swiper-slide  *ngFor="let movie of nowMovies" class="swiper-slide-container"
+    [ngStyle]="{'background-image': movie.backdrop_path | background:'original'}">
+    <div class="text-container">
+      <h2>{{movie.title}}</h2>
+      <button [routerLink]="['/home/info/' + movie.id] + '/movie' ">Más información</button>
+    </div>
+  </swiper-slide>
+</swiper-container>

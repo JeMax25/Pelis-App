@@ -1,0 +1,18 @@
+<swiper-container *ngIf="genreList.length > 1"
+    space-between="4"
+    navigation="true"
+    observer="true"
+    observe-parents="true"
+    [slidesPerGroup]="slidesPerView"
+    [slidesPerView]="slidesPerView">
+    <swiper-slide (click)="searchByGenre(media,genre.id,page = 1)" (click)="changeColor(genre.id)"  *ngFor="let genre of genreList"
+      [ngClass]="getGenreColor(genre.id) ? 'active' : ''">
+      <h1 >{{genre.name}}</h1>
+    </swiper-slide>
+  </swiper-container>
+  <div *ngIf="moviesOrSeries.length > 1" class="next-previus animate__animated animate__fadeIn">
+    <button (click)="nextPage(media,-1)" >Anterior</button>
+    <p>Pagina: {{page}}</p>
+    <button (click)="nextPage(media,+1)" [disabled]="buttonDisable">Siguiente</button>
+  </div>
+

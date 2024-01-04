@@ -1,0 +1,31 @@
+<div class="shadow">
+  <div class="card-info animate__animated animate__zoomIn" *ngIf="serieDetails" >
+    <div class="title-genres " [ngStyle]="{'background-image': serieDetails.backdrop_path | background:'original'}">
+      <div class="genres">
+        <p *ngFor="let genres of serieDetails.genres">{{genres.name}}</p>
+      </div>
+      <h1>{{serieDetails.name}}</h1>
+      <p [routerLink]="[closeRedirect]" class="close">X</p>
+    </div>
+    <div class="info">
+      <div class="details">
+        <p>Ultimo Capitulo: {{serieDetails.last_air_date}}</p>
+        <p>Temporadas: {{serieDetails.seasons.length}}</p>
+        <!-- <p>raiting</p> -->
+      </div>
+      <p class="overview">{{serieDetails.overview}}</p>
+      <div *ngIf="serieCredits.length >= 1" class="slide-credits">
+        <h3>Reparto</h3>
+        <swiper-container
+        space-between="3"
+        navigation="true"
+        [slidesPerGroup]="slidesPerView"
+        [slidesPerView]="slidesPerView">
+          <swiper-slide *ngFor="let actor of serieCredits">
+            <img class="img-slide" *ngIf="actor.profile_path != null" [src]="['https://image.tmdb.org/t/p/w500/' + actor.profile_path]" alt="">
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</div>

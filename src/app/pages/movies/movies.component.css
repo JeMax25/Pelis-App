@@ -1,0 +1,40 @@
+.list-container {
+  height: 100%;
+  width: 96vw;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr)  );
+  grid-template-rows: auto;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-card {
+  width: 100%;
+  height: auto;
+}
+
+.list-card > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.list-card > img:hover {
+  transform: scale(0.97);
+}
+
+@media screen and (max-width: 768px) {
+  .list-container {
+    height: 100%;
+    width: 96vw;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(130px,1fr)  );
+    grid-template-rows: auto;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+}

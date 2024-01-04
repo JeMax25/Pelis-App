@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--color-segundario);
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+:root {
+  --color-primario: #4DD678;
+  --color-segundario: rgb(22, 18, 37);
+}
+
+::selection {
+  color: var(--color-primario);
+  background-color: rgb(255, 255, 255);
+}
+
+/* Cambiar el color del paginador (puntos de paginación) */
+.swiper-pagination-bullet {
+  background-color: red; /* Cambia el color a tu preferencia */
+}
+
+/* Cambiar el color de la navegación (flechas de navegación) */
+.swiper-button-next, .swiper-button-prev {
+  color: blue; /* Cambia el color a tu preferencia */
+}

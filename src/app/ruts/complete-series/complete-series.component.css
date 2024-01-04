@@ -1,0 +1,144 @@
+.shadow {
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.629);
+  backdrop-filter: blur(1px);
+  overflow-y: scroll;
+  z-index: 100;
+}
+
+.card-info {
+  height: auto;
+
+  width: 50%;
+  margin: 15px auto 0 auto;
+  background-color: rgb(0, 0, 0);
+  border-radius: 6px;
+  overflow-y: hidden;
+}
+
+.title-genres {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  padding: 15px;
+  border-radius: 6px 6px 0 0;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.title-genres > h1 {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 2px rgb(0, 0, 0));
+}
+
+.genres {
+  display: flex;
+  gap: 10px;
+}
+
+.genres > p {
+  background-color: rgba(0, 0, 0, 0.494);
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.close {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  color: white;
+  background-color: var(--color-segundario);
+  cursor: pointer;
+}
+
+.close:hover {
+  border: 1px solid var(--color-primario);
+  color: var(--color-primario);
+}
+
+.info {
+  background-color: black;
+  color: white;
+  padding: 15px;
+}
+
+.details {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.details > p {
+  background-color: rgba(204, 204, 204, 0.259);
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.overview {
+  margin: 10px 0 10px 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.832);
+}
+
+.slide-credits {
+  width: 100%;
+}
+
+.slide-credits > h3 {
+  font-size: 1.5rem;
+  padding-bottom: 15px;
+}
+
+swiper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-slide {
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .card-info {
+    width: 90%;
+    height: auto;
+    min-height: auto;
+  }
+
+  .genres {
+    gap: 3.5px;
+    width: 90%;
+    height: auto;
+  }
+
+  .genres > p {
+    padding: 2px;
+    font-size: 1rem;
+  }
+
+  }
+
+

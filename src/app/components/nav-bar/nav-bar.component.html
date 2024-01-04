@@ -1,0 +1,16 @@
+<nav class="nav-bar">
+  <div class="nav-components">
+    <h2 routerLink="home" class="nav-title">PELIS<span>APP</span></h2>
+    <img (click)="openCloseMenu()" class="icon-menu" src="../../../assets/icons/icon-menu.svg" alt="">
+    <ul class="nav-ul" [ngClass]="{'active-menu': openMenu}">
+      <img (click)="openCloseMenu()" class="icon-menu icon-close" src="../../../assets/icons/icon-menu.svg" alt="">
+      <li [routerLink]="'/home'" routerLinkActive="active-link">Inicio</li>
+      <li [routerLink]="'/movies'" routerLinkActive="active-link">Peliculas</li>
+      <li [routerLink]="'/series'" routerLinkActive="active-link">Series</li>
+    </ul>
+  </div>
+  <div class="form">
+    <img (click)="searchMovie(txtInput.value)" src="../../../assets/icons/icon-search.svg" alt="" class="icon-search">
+    <input (keyup.enter)="searchMovie(txtInput.value)" [value]="[txtInput.value]" type="text" class="form-input" placeholder="Buscar..." #txtInput>
+  </div>
+</nav>

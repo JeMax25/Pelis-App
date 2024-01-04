@@ -1,0 +1,21 @@
+swiper-container {
+  width: 95%;
+  height: 40vh;
+  overflow: hidden;
+  margin: auto;
+}
+
+swiper-slide {
+  height: 95%;
+  background-color: aliceblue;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+swiper-slide:hover {
+  transform: scale(0.96);
+}

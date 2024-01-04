@@ -1,0 +1,10 @@
+<swiper-container *ngIf="getMovies"
+space-between="11"
+scrollbar="true"
+observer="true"
+observe-parents="true"
+free-mode="true"
+[slidesPerView]="slidesPerView">
+  <swiper-slide *ngFor="let movie of getMovies"  [routerLink]="['/home/info/' + movie.id + getMedia(movie)]"
+  [ngStyle]="{'background-image': movie.poster_path | background:'w500'}"></swiper-slide>
+</swiper-container>
